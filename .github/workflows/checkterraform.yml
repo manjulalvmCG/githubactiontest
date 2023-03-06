@@ -7,6 +7,7 @@ on:
   pull_request:
 
 env:
+   export_default_credentials: true
    GOOGLE_CREDENTIALS: ${{secrets.GCP_SA_KEY}}
    ROOT_PATH: '${{github.workspace }}/src/terraform'   
 
