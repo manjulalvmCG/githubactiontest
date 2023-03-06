@@ -8,7 +8,7 @@ on:
 
 env:
    export_default_credentials: true
-   GOOGLE_CREDENTIALS: ${{secrets.GCP_SA_KEY}}
+   GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}
    ROOT_PATH: '${{github.workspace }}/src/terraform'   
 	  
 	  
