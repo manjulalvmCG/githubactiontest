@@ -10,12 +10,15 @@ env:
    export_default_credentials: true
    GOOGLE_CREDENTIALS: ${{secrets.GCP_SA_KEY}}
    ROOT_PATH: '${{github.workspace }}/src/terraform'   
-
-jobs:
-  terraform:
-    name: 'Terraform'
+	  
+	  
+	  jobs:
+  setup:
+    name: 'Setup GCP and Terraform'
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
