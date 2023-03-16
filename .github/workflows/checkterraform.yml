@@ -11,8 +11,7 @@ env:
    GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}
    ROOT_PATH: '${{github.workspace }}/src/terraform'   
 	  
-	  
-	  jobs:
+jobs:
   setup:
     name: 'Setup GCP and Terraform'
     runs-on: ubuntu-latest
